@@ -1,6 +1,7 @@
 from flask import Flask , render_template , jsonify
 
-from connect import grouped , df
+import pandas as pd 
+from connect import sheet
 import numpy as np
 import matplotlib.pyplot as plt 
 
@@ -18,6 +19,22 @@ def home():
 
 @app.route('/analysis')
 def analysis( ):
+    
+    data = sheet.get_all_values()
+
+    #  create a Pandas DataFrame from the data
+    df = pd.DataFrame(data[1:], columns=data[0])
+
+    df['status'] = df['status'].astype(int) - 1
+
+    # convert 'status' column to integer values
+    df['status'] = df['status'].astype(int)
+
+    # group by date and calculate the number of correct and incorrect questions
+    grouped = df.groupby('date')['status'].agg(correct='sum', incorrect='count') 
+
+    # calculate the total number of questions per date
+    grouped['total_questions'] = grouped['correct'] + grouped['incorrect']
     
     grouped1 = grouped.reset_index()
     ax = grouped1.plot.bar(x='date', y=['correct', 'incorrect'], stacked=True, width= 0.1 ,  color=['#03fc30', '#fc1303'])
@@ -91,11 +108,11 @@ def analysis( ):
         y_values_correct.append(freq['correct'])
         y_values_incorrect.append(freq['incorrect'])
         
-    x_ticks.sort()
 
     ax.barh(x_ticks, y_values_correct, label='Correct' , color ='green')
     ax.barh(x_ticks, y_values_incorrect, label='Incorrect', left=y_values_correct , color= 'red')
 
+    x_ticks.sort(reverse=True)
     plt.xlabel('Frequency')
     plt.ylabel('Letters')
     plt.legend()
