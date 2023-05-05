@@ -1,0 +1,95 @@
+@media only screen and (max-width : 992px) {
+
+    .two-columns {
+
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+  } 
+  .show_nav {
+    padding-top: 2%;
+    display: flex;
+    width: 100vw;
+    height: 50vh; /* <-- Change this to adjust the height */
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .container{
+    margin: 0;
+    margin-top: 5vh;
+  }
+  .annie{
+    height: 65vh;
+  }
+  .column-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+  
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100vw;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      background-color: #3f535a;
+      font-size: 20px;
+    }
+
+    .main_nav {
+      display: none;
+    }
+
+    .show_nav {
+      padding-top: 2%;
+      display: flex;
+      width: 100vw;
+      height: 30vh;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .main_nav li {
+      width: 100%;
+      height: 50px;
+      font-size: 25px;
+      justify-content: center;
+      text-align: center;
+      padding: 0%;
+    }
+
+    .navbar_toggle {
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 30px;
+      color: #ffffff;
+      background: transparent;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      display: block;
+    }
+
+    .logo_header {
+      width: 100%;
+      justify-content: space-between;
+      margin-right: 2%;
+    }
+
+  }
+
+  
+
+
+
+  /* .plots{
+    flex-direction: column;
+  } */
+  /* #plot2{
+    flex-direction: column-reverse;
+  } */

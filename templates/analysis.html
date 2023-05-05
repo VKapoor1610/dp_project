@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/temp_style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_analysis.css') }}">
+
+
+  <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
+  <script src="static/js/app.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+  <!-- media query is fired here  -->
+    
+  <style>
+    @media only screen and (max-width : 992px) {
+        .plots{
+            flex-direction: column;
+        }
+        #plot1{
+            flex-direction: column-reverse;
+        }
+        #plot3{
+            flex-direction: column-reverse;
+        }
+        #plot2{
+            flex-direction: column;
+        }
+    }
+  </style>
+  <!-- responsiveness in phone using media queries  -->
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo_header">
+      
+      <a href="{{ url_for('home') }}" class="logo">Logo</a>
+      <button class="navbar_toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+
+    <ul class="main_nav">
+      <li>
+        <a href="home.html#about" class="nav_links">About</a>
+      </li>
+      <li>
+        <a href="#" class="nav_links">Data Analysis</a>
+      </li>
+      <li>
+        <a href="#" class="nav_links">Contact</a>
+      </li>
+      <li>
+        <a href="#" class="nav_links">Blog</a>
+      </li>
+    </ul>
+
+  </nav>
+
+
+
+   <div class="plots" id="plot1">
+
+        <div class="column" id = "column1">
+          <img src="static/images/plot1.png" alt="Image">
+        </div>
+        <div class="column" id = "column2">
+          <h2>Heading</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod elit vel faucibus tincidunt. Donec ultrices, magna vel consequat molestie, ex turpis lacinia velit, quis dignissim sapien massa nec lectus.</p>
+        </div>
+      
+
+   </div>
+   <div class="plots" id="plot2">
+
+    <div class="column" id = "column2">
+        <h2>Heading</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod elit vel faucibus tincidunt. Donec ultrices, magna vel consequat molestie, ex turpis lacinia velit, quis dignissim sapien massa nec lectus.</p>
+      </div>
+    <div class="column" id = "column1">
+        <img src="static/images/plot2.png" alt="Image">
+      </div>
+      
+    
+
+   </div>
+   <div class="plots" id="plot3">
+
+    <div class="column" id = "column1">
+        <img src="static/images/plot3.png" alt="Image">
+      </div>
+      <div class="column" id = "column2">
+        <h2>Heading</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod elit vel faucibus tincidunt. Donec ultrices, magna vel consequat molestie, ex turpis lacinia velit, quis dignissim sapien massa nec lectus.</p>
+      </div>
+    
+
+   </div>
+
+
+  
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/temp_style.css') }}">
+
+
+  <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
+
+  <script src="static/js/app.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+  <!-- media query is fired here  -->
+    
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo_header">
+      <a href="#" class="logo">Logo</a>
+      <button class="navbar_toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+
+    <ul class="main_nav">
+      <li>
+        <a href="#about" class="nav_links">About</a>
+      </li>
+
+
+
+      <li>
+        <a href="{{ url_for('analysis') }}" class="nav_links">Data Analysis</a>
+      </li>
+      <li>
+        <a href="#" class="nav_links">Contact</a>
+      </li>
+      <li>
+        <a href="#" class="nav_links">Blog</a>
+      </li>
+    </ul>
+
+  </nav>
+
+
+  <div class="container">
+
+    <h1 class="sect">Write-O-Braille</h1>
+
+    <section class="two-columns">
+      <div class="column column-image">
+        <img class="annie" src="https://images.unsplash.com/photo-1682832919420-b2aca69e6ebc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDN8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="Image">
+      </div>
+      <div class="column column-content">
+        <h2>Heading</h2>
+        <p id="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod elit vel faucibus tincidunt. Donec ultrices, magna vel consequat molestie, ex turpis lacinia velit, quis dignissim sapien massa nec lectus. </p>
+      </div>
+    </section>
+    
+
+  </div>
+
+</body>
+
+</html>
