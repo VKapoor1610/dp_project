@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/temp_style.css') }}">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style_analysis.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 
   <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
@@ -20,6 +21,12 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
 
   <!-- media query is fired here  -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Helvetica&display=swap');
+    body {
+        font-family: 'Helvetica', sans-serif;
+    }
+</style>
     
   <style>
     @media only screen and (max-width : 992px) {
@@ -55,16 +62,16 @@
 
     <ul class="main_nav">
       <li>
-        <a href="home.html#about" class="nav_links">About</a>
+        <a href="{{ url_for('home') }}#about" class="nav_links">About</a>
       </li>
       <li>
-        <a href="#" class="nav_links">Data Analysis</a>
+        <a href="javascript:location.reload()" class="nav_links">Data Analysis</a>
       </li>
       <li>
-        <a href="#" class="nav_links">Contact</a>
+        <a href="#" class="nav_links">Team WOB</a>
       </li>
       <li>
-        <a href="#" class="nav_links">Blog</a>
+        <p  style="color:#3f535a"class="nav_links"></p>
       </li>
     </ul>
 
@@ -78,20 +85,35 @@
           <img src="static/images/plot1.png" alt="Image">
         </div>
         <div class="column" id = "column2">
-          <h2>Heading</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod elit vel faucibus tincidunt. Donec ultrices, magna vel consequat molestie, ex turpis lacinia velit, quis dignissim sapien massa nec lectus.</p>
+          <div class='inside'>
+
+          <h2> Correct and Incorrect Questions by Date</h2>
+          <p>
+            This bar plot visualizes the performance over time, showing the number of correct and incorrect questions answered on each date. <br><br>
+            The black line shows the total number of questions answered on each date.
+          </p>
+          </div>
+
+          <button class = 'reload' onclick="location.reload()">Reload</button>
         </div>
       
 
    </div>
    <div class="plots" id="plot2">
 
+    
     <div class="column" id = "column2">
-        <h2>Heading</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod elit vel faucibus tincidunt. Donec ultrices, magna vel consequat molestie, ex turpis lacinia velit, quis dignissim sapien massa nec lectus.</p>
+
+      <div class='inside'>
+        <h2>Recorded accuracy Over Time</h2>
+        <p>
+          This plot shows the accuracy of the child's answers over time.<br><br> The accuracy is calculated as the percentage of correct answers out of the total number of questions answered on each day.<br><br> The blue line represents the accuracy trend, and the blue dots represent the accuracy on each day. 
+        </p>
+      </div>
+        <button class = 'reload' onclick="location.reload()">Reload</button>
       </div>
     <div class="column" id = "column1">
-        <img src="static/images/plot2.png" alt="Image">
+        <img  src="static/images/plot2.png" alt="Image">
       </div>
       
     
@@ -100,11 +122,14 @@
    <div class="plots" id="plot3">
 
     <div class="column" id = "column1">
-        <img src="static/images/plot3.png" alt="Image">
+        <img style="height:200% ;width : 120%;"src="static/images/plot3.png" alt="Image">
       </div>
       <div class="column" id = "column2">
-        <h2>Heading</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod elit vel faucibus tincidunt. Donec ultrices, magna vel consequat molestie, ex turpis lacinia velit, quis dignissim sapien massa nec lectus.</p>
+        <div class='inside'>
+        <h2>Correct and Incorrect Attempts in Each Letter</h2>
+        <p>This horizontal bar plot represents the distribution of correct and incorrect attempts for each letter of the alphabet.<br><br>The plot provides insight into which letters are easy or difficult for the child, based on their accuracy. The <b style ="color:green;">green</b> bars indicate the number of correct attempts, while the <b style='color:red'>red</b> bars represent the number of incorrect attempts. <br><br>The longer the bar, the more attempts made by the child for that letter. </p>
+        </div>
+        <button class = 'reload' onclick="location.reload()">Reload</button>
       </div>
     
 

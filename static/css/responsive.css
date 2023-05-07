@@ -80,6 +80,17 @@
       justify-content: space-between;
       margin-right: 2%;
     }
+    
+    
+    
+    .column .reload{
+
+      /* border: 2px solid brown; */
+      margin: 10px ;
+    }
+    .column p{
+      font-size: 15px;
+    }
 
   }
 

@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 .container{
     
     background-color: rgb(232, 232, 232);
@@ -72,6 +73,7 @@ a {
 
 
 
+
 /* after nav bar home section  */
 
 .sect{
@@ -79,7 +81,8 @@ a {
     padding: 5px;
     text-align: center;
     background-color: white;
-    font-family: 'Times New Roman', Times, serif;
+    color: #3f535a;
+    font-size: 50px ; 
 }
 
 .two-columns {
@@ -128,4 +131,13 @@ a {
 .annie {
     /* text-align: center; */
     height: 70vh;
+}
+
+#main_head{
+    font-size: 30px;
+    color: #3f535a;
+}
+#about{
+    margin-top: 25px;
+    font-size: larger
 }
