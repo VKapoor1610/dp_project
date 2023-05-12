@@ -121,6 +121,10 @@ def analysis( ):
         
     return render_template('analysis.html')
 
+@app.route('/team')
+def team():
+    return render_template('team.html')
+
 if(__name__ == "__main__"):
     app.run(debug=True)
 

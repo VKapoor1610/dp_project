@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Information</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/temp_style.css') }}">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
+
+  <script src="static/js/app.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/team.css') }}">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo_header">
+      <a href="{{ url_for('home') }}" class="logo">Logo</a>
+      <button class="navbar_toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+
+    <ul class="main_nav">
+      <li>
+        <a href="{{ url_for('home') }}#about" class="nav_links">About</a>
+      </li>
+
+
+
+      <li>
+        <a href="{{ url_for('analysis') }}" class="nav_links">Data Analysis</a>
+      </li>
+      <li>
+        <a href="" class="nav_links">Team WOB</a>
+      </li>
+      <li>
+        <p style="color:#3f535a" class="nav_links"></p>
+      </li>
+    </ul>
+
+  </nav>
+
+
+	<!-- Add content here -->
+
+  <div class="heading">
+    <h1>Team</h1>
+  </div>
+
+  <div class="main_cont">
+
+  
+
+  <div class="team-member">
+    <img src="https://via.placeholder.com/350x350" alt="Person 1">
+    <h2>John Doe</h2>
+    
+    <p>Email: john@example.com</p>
+  </div>
+
+
+  <div class="team-member">
+    <img src="https://via.placeholder.com/350x350" alt="Person 2">
+    <h2>Jane Smith</h2>
+    
+    <p>Email: jane@example.com</p>
+  </div>
+  <!-- Repeat for other team members -->
+  <div class="team-member">
+    <img src="https://via.placeholder.com/350x350" alt="Person 2">
+    <h2>Jane Smith</h2>
+    
+    <p>Email: jane@example.com</p>
+  </div>
+  <div class="team-member">
+    <img src="https://via.placeholder.com/350x350" alt="Person 2">
+    <h2>Jane Smith</h2>
+    
+    <p>Email: jane@example.com</p>
+  </div>
+
+  <div class="team-member">
+    <img src="https://via.placeholder.com/350x350" alt="Person 2">
+    <h2>Jane Smith</h2>
+    
+    <p>Email: jane@example.com</p>
+  </div>
+  <div class="team-member">
+    <img src="https://via.placeholder.com/350x350" alt="Person 2">
+    <h2>Jane Smith</h2>
+    
+    <p>Email: jane@example.com</p>
+  </div>
+  
+</div>
+</body>
+</html>
