@@ -11,6 +11,13 @@
     box-shadow: 10cm;
 }
 
+.logo_img{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 7vh;
+}
+
 a {
     text-decoration: none;
 }
@@ -68,8 +75,46 @@ a {
     /* height: 50vh; */
 }
 
+/* two options in data analyss  */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    padding: 5px;
+    display: none;
+    position: absolute;
+    background-color: #3f535a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    margin-top: -2px;
+    margin-bottom: 0;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
 
 
+.analysis_heading{
+    margin-top : 2vh ; 
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: 700   ;
+    color: #3f535a;
+}
 
 
 

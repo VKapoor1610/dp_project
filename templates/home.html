@@ -35,7 +35,7 @@
 
   <nav class="navbar">
     <div class="logo_header">
-      <a href="#" class="logo">Logo</a>
+      <a href="#" class="logo"><img class = 'logo_img' src="static/images/logo.png"></a>
       <button class="navbar_toggle">
         <i class="fas fa-bars"></i>
       </button>
@@ -50,8 +50,16 @@
 
 
       <li>
-        <a href="{{ url_for('analysis') }}" class="nav_links">Data Analysis</a>
+        <div class="dropdown">
+          <a href="#" class="nav_links dropdown-toggle">Data Analysis</a>
+          <div class="dropdown-content">
+            <br>
+            <a href="{{ url_for('analysis') }}" >Letter Practice</a>
+            <a href="{{ url_for('analysis2') }}">Word Practice</a>
+          </div>
+        </div>
       </li>
+      
       <li>
         <a href="{{ url_for('team') }}" class="nav_links">Team WOB</a>
       </li>
