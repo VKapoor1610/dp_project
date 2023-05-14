@@ -35,7 +35,7 @@
 
   <nav class="navbar">
     <div class="logo_header">
-      <a href="#" class="logo"><img class = 'logo_img' src="static/images/logo.png"></a>
+      <a href="javascript:location.reload()" class="logo"><img class = 'logo_img' src="static/images/logo.png"></a>
       <button class="navbar_toggle">
         <i class="fas fa-bars"></i>
       </button>
@@ -51,7 +51,7 @@
 
       <li>
         <div class="dropdown">
-          <a href="#" class="nav_links dropdown-toggle">Data Analysis</a>
+          <p class="nav_links dropdown-toggle">Data Analysis</p>
           <div class="dropdown-content">
             <br>
             <a href="{{ url_for('analysis') }}" >Letter Practice</a>
@@ -89,6 +89,12 @@
     
 
   </div>
+
+  <div id="loading-container">
+    <div class="spinner"></div>
+  </div>
+  
+  <script src="static/js/loading.js"></script>
 
 </body>
 

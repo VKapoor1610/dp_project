@@ -100,10 +100,15 @@ a {
     margin-bottom: 0;
     text-decoration: none;
     display: block;
+
+  }
+  .dropdown-content a:hover{
+    text-decoration: underline;
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
+    
   }
   
 
@@ -113,6 +118,8 @@ a {
     text-align: center;
     margin-bottom: 0px;
     font-weight: 700   ;
+    font-family: cursive;
+    text-decoration: wavy overline;
     color: #3f535a;
 }
 
@@ -122,12 +129,15 @@ a {
 /* after nav bar home section  */
 
 .sect{
-    margin: 15px;
+    margin: 12px;
     padding: 5px;
     text-align: center;
     background-color: white;
     color: #3f535a;
-    font-size: 50px ; 
+    font-family: cursive;
+    font-style: oblique ; 
+    font-size: 37px ; 
+    text-decoration: wavy overline;
 }
 
 .two-columns {
@@ -186,3 +196,39 @@ a {
     margin-top: 25px;
     font-size: larger
 }
+
+
+
+/* loadign page  */
+#loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+  }
+  
+  .spinner {
+    width: 60px;
+    height: 60px;
+
+    margin: auto;
+    margin-top: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #526572;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

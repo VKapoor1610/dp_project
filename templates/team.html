@@ -41,7 +41,7 @@
 
       <li>
         <div class="dropdown">
-          <a href="#" class="nav_links dropdown-toggle">Data Analysis</a>
+          <p class="nav_links dropdown-toggle">Data Analysis</p>
           <div class="dropdown-content">
             <br>
             <a href="{{ url_for('analysis') }}" >Letter Practice</a>
@@ -50,7 +50,7 @@
         </div>
       </li>
       <li>
-        <a href="" class="nav_links">Team WOB</a>
+        <a href="javascript:location.reload()" class="nav_links">Team WOB</a>
       </li>
       <li>
         <p style="color:#3f535a" class="nav_links"></p>
@@ -112,5 +112,12 @@
   </div>
   
 </div>
+
+  <div id="loading-container">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="static/js/loading.js"></script>
+
 </body>
 </html>
