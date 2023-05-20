@@ -156,7 +156,7 @@ def analysis():
         letter = row['letter']
         incorrect_data = row['incorrectdata']
         incorrect_data_list = eval(incorrect_data)  # convert string to list
-        correct = len(incorrect_data_list)
+        correct = incorrect_data_list.count(1)
         incorrect = len(incorrect_data_list) - correct
 
         if letter not in letter_freq:
