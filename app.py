@@ -156,7 +156,7 @@ def analysis():
         letter = row['letter']
         incorrect_data = row['incorrectdata']
         incorrect_data_list = eval(incorrect_data)  # convert string to list
-        correct = sum(incorrect_data_list)
+        correct = len(incorrect_data_list)
         incorrect = len(incorrect_data_list) - correct
 
         if letter not in letter_freq:
@@ -178,20 +178,21 @@ def analysis():
         total_attempts = freq['total']/6
         
         f.write( str(letter) + '  ' + str(total_attempts) + '\n')
-        if total_attempts < 5:
+        if total_attempts <= 5:
             completion_percentage = 0
        
         else:
-            completion_percentage = min( 100 , ( 2 *freq['correct'] / 3) / (freq['correct'] / 3 + freq['incorrect'] / 2) * 100)
+            # logic 60% completion over time is marked with 100% completions and calculated if attempts more that equal to 5
+            completion_percentage = min( 100 , 100*(freq['correct'] * 100 ) / (freq['correct'] + freq['incorrect'] * 60  ))
 
         x_ticks.append(letter)
         y_values.append(completion_percentage)
 
     sorted_indices = sorted(range(len(x_ticks)), key=lambda x: x_ticks[x])
     sorted_list1 = [x_ticks[i] for i in sorted_indices]
-    sorted_list2 = [y_values[i] for i in sorted_indices]
+    sorted_list2 = [y_values[i] for i in sorted_indices] 
     
-    ax.barh(sorted_list1, sorted_list2, color='green')
+    ax.barh(sorted_list1, sorted_list2, color='green' , height = 0.9)
 
     y_values.sort(reverse=True)
     plt.xlabel('Completion Percentage')
