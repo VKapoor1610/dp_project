@@ -1,9 +1,9 @@
-from flask import Flask , render_template , jsonify
+from flask import Flask , render_template
 
 import pandas as pd 
 from connect import sheet
-import numpy as np
 import matplotlib.pyplot as plt 
+
 
 
 app = Flask(__name__)
